@@ -8,10 +8,14 @@ int main()
     cin >> c;
 
     int d = b + c;
-    int hour = d / 60;
+    int hour = d / 60 + a;
+    while(hour >= 24)
+    {
+        hour -= 24;
+    }
     int min = d % 60;
 
-    cout << a + hour << " " << min << "\n";
+    cout << hour << " " << min << "\n";
 
     return 0;
 }
